@@ -45,7 +45,13 @@ jobs:
           mkdir installation && \
           make && \
           make prefix="$(pwd)/installation" install
-  
+
+      - shell: cmd
+        run: xcopy /H /Y /C "C:\tools\cygwin\bin\cygwin1.dll" "tree\installation"
+        
+      - shell: cmd
+        run: cd tree && cd installation && dir
+        
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
