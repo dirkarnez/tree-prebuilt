@@ -54,8 +54,8 @@ CFLAGS=-ggdb -pedantic -Wall -DLINUX -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=6
 #MANDIR=${prefix}/share/man/man1
 
 # Uncomment for Cygwin:
-CFLAGS=-O2 -Wall static -fomit-frame-pointer -DCYGWIN
-LDFLAGS=static
+CFLAGS=-O2 -Wall -static -fomit-frame-pointer -DCYGWIN
+LDFLAGS=-static
 TREE_DEST=tree.exe
 OBJS+=strverscmp.o
 
