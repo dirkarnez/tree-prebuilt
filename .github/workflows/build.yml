@@ -47,7 +47,7 @@ jobs:
           make prefix="$(pwd)/installation" install
 
       - shell: cmd
-        run: xcopy /H /Y /C "C:\tools\cygwin\bin\cygwin1.dll" "tree\installation"
+        run: xcopy /H /Y /C "C:\tools\cygwin\bin\cygwin1.dll" "tree\installation\bin"
         
       - shell: cmd
         run: cd tree && cd installation && dir
